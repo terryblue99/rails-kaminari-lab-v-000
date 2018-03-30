@@ -2256,3 +2256,14 @@ Processing by SongsController#index as HTML
   [1m[35mSong Load (0.5ms)[0m  SELECT  "songs".* FROM "songs"  ORDER BY "songs"."created_at" DESC LIMIT 20 OFFSET 0
   Rendered songs/index.html.erb within layouts/application (27.8ms)
 Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 73.176.121.246 at 2018-03-30 02:03:46 +0000
+Cannot render console from 73.176.121.246! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "songs" LIMIT 20 OFFSET 0) subquery_for_count
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "songs"[0m
+  [1m[35mSong Load (1.3ms)[0m  SELECT  "songs".* FROM "songs"  ORDER BY "songs"."created_at" DESC LIMIT 20 OFFSET 0
+  Rendered songs/index.html.erb within layouts/application (315.3ms)
+Completed 200 OK in 518ms (Views: 510.8ms | ActiveRecord: 2.0ms)
